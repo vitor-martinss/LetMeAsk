@@ -2,7 +2,7 @@
 
 ## 💇🏻‍♂️ About the project
 
-This project is an
+This project is a platform built to let you gather questions from your viewers during your stream and let them vote for which are the best questions for you to answer.
 
 ## 💻 Screens
 
@@ -15,15 +15,17 @@ This project is an
 
 Technologies that I used to develop this project
 
-- [React JS](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Json Server](https://github.com/typicode/json-server)
+- [ReactJS](https://reactjs.org/)
+- [Typescript](https://www.typescriptlang.org/)
+- [Firebase Authentication](https://firebase.google.com/products/auth)
+- [Firebase Realtime Database](https://firebase.google.com/products/realtime-database)
 
 ## 💻 Getting started
 
 
 ### Requirements
 
+- You need to install both [Node.js](https://nodejs.org/en/download/) and [Yarn](https://yarnpkg.com/) to run this project.
 
 **Clone the project and access the folder**
 
@@ -50,4 +52,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
-Made with 💜 by Vitor Martins during NLW #5 👋 [See my linkedin](https://www.linkedin.com/in/vitor-martinss/)
+Made with 💜 by Vitor Martins during NLW #6 - Together 👋 [See my linkedin](https://www.linkedin.com/in/vitor-martinss/)
