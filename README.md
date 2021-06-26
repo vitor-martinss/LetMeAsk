@@ -36,7 +36,7 @@ $ git clone https://github.com/vitor-martinss/LetMeAsk.git
 **Follow the steps below for Web Version**
 
 ```js
-  # Go to src folder
+  # Go to project.static folder
   cd LetMeAsk.static 
 
   # Install the dependencies
@@ -45,6 +45,7 @@ $ git clone https://github.com/vitor-martinss/LetMeAsk.git
   # Start project
   yarn start
 ```
+The app will be available for access on your browser at `http://localhost:3000`
 
 ## 📝 License
 
