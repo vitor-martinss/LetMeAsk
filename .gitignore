@@ -1,0 +1,23 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+LetMeAsk.Static/node_modules
+LetMeAsk.Static/.pnp
+LetMeAsk.Static/.pnp.js
+
+# testing
+LetMeAsk.Static/coverage
+
+# production
+LetMeAsk.Static/build
+
+# misc
+LetMeAsk.Static/.DS_Store
+LetMeAsk.Static/.env.local
+LetMeAsk.Static/.env.development.local
+LetMeAsk.Static/.env.test.local
+LetMeAsk.Static/.env.production.local
+
+LetMeAsk.Static/npm-debug.log*
+LetMeAsk.Static/yarn-debug.log*
+LetMeAsk.Static/yarn-error.log*
