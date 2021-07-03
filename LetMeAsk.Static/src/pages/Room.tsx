@@ -19,11 +19,19 @@ type RoomParams = {
 
 
 export function Room() {
-	const { user } = useAuth()
+	const { user, signInWithGoogle } = useAuth()
 	const params = useParams<RoomParams>()
 	const [newsQuestion, setNewQuestion] = useState('')
 	const roomId = params.id
 	const {title, questions} = useRoom(roomId)
+
+	async function handleLogin() {
+		if (!user) {
+			await signInWithGoogle()
+		}
+
+		toast.success('O seu login foi um sucesso! Agora você ja pode escrever uma pergunta.')
+	}
 
 	async function handleSendQuestion(event: FormEvent) {
 		event.preventDefault()
@@ -92,11 +100,18 @@ export function Room() {
 									<span>{user.name}</span>
 								</div>
 							) : (
-								<span>Para enviar uma pergunta, <button>faça seu login</button></span>
+								<span>Para enviar uma pergunta,&nbsp;
+									<button 
+										type='button'
+										onClick={handleLogin}
+									>
+										faça seu login
+									</button>
+								</span>
 							)
 						}
 						
-						<Button type='submit' disabled={!user}>Enviar perguntas</Button>
+						<Button type='submit' disabled={!user}>Enviar pergunta</Button>
 					</div>
 				</form>
 				<div className="question-list">
