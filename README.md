@@ -19,6 +19,7 @@ Technologies that I used to develop this project
 - [Typescript](https://www.typescriptlang.org/)
 - [Firebase Authentication](https://firebase.google.com/products/auth)
 - [Firebase Realtime Database](https://firebase.google.com/products/realtime-database)
+- [React Hot Toast](https://react-hot-toast.com/)
 
 ## 💻 Getting started
 

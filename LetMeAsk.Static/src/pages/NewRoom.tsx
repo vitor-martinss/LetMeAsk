@@ -1,4 +1,6 @@
 import { FormEvent } from 'react'
+import toast from 'react-hot-toast';
+
 import illustrationImg from '../assets/images/illustration.svg'
 import logoImg from '../assets/images/logo.svg'
 
@@ -8,7 +10,6 @@ import { Link, useHistory } from 'react-router-dom'
 import { useState } from 'react'
 import { database } from '../services/firebase'
 import { useAuth } from '../hooks/useAuth'
-
 
 
 export function NewRoom() {
@@ -22,6 +23,7 @@ export function NewRoom() {
 		event.preventDefault()
 
 		if (newRoom.trim() === '') {
+			toast.error('Insira o nome da sala')
 			return
 		}
 	
@@ -31,6 +33,8 @@ export function NewRoom() {
 			title: newRoom,
 			authorId: user?.id
 		})
+
+		toast.success(`Bem vindo a sua sala ${firebaseRoom.key} `)
 
 		history.push(`/admin/rooms/${firebaseRoom.key}`)
 	}
