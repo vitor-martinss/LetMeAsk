@@ -1,7 +1,7 @@
 {
 	"name": "LetMeAsk",
 	"short_name": "LetMeAsk",
-	"start_url": "/index.html",
+	"start_url": "/",
 	"icons": [{
 		"src": "/favicon-32x32.png",
 		"sizes": "192x192",
