@@ -4,8 +4,20 @@
 	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 	padding: 24px;
 
+	&-list {
+		border-top: 1px solid #e2e2e2;
+		padding-top: 4rem;
+		margin-top: 4rem;
+
+		.page-room--admin & {
+			padding-top: 0;
+			border-top: none;
+			margin-top: 0;
+		}
+	}
+
 	&+.question {
-		margin-top: 8px;
+		margin-top: 1.2rem;
 	}
 
 	&.highlighted {
@@ -30,11 +42,13 @@
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
+		row-gap: 1.6rem;
 		margin-top: 24px;
 
 		>div {
 			display: flex;
-			gap: 16px;
+			gap: 14px;
 		}
 
 		.user-info {
@@ -48,7 +62,6 @@
 			}
 
 			span {
-				margin-left: 8px;
 				color: #737380;
 				font-size: 14px;
 			}

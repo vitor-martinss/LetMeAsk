@@ -51,7 +51,7 @@ export function AdminRoom() {
 	}
 
 	return ( 
-		<div id="page-room">
+		<div className="page-room page-room--admin">
 			<header>
 				<div className='content'>
 					<img src={logoImg} alt="Let me ask" />
@@ -62,10 +62,10 @@ export function AdminRoom() {
 				</div>
 			</header>
 
-			<main>
+			<main className="page-room-wrapper">
 				<div className='room-title'>
-					<h1>Sala {title}</h1>
-					{questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
+					<h1>Sala <span className='room-title-main'>{title}</span> </h1>
+					{questions.length > 0 && <span className='room-title-number'>{questions.length} pergunta(s)</span>}
 					
 				</div>
 				

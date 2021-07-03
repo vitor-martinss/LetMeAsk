@@ -8,8 +8,9 @@
 	cursor: pointer;
 
 	display: flex;
+	align-items: center;
 
-	div {
+	&-clipboard {
 		background: #835afd;
 		padding: 0 12px;
 		display: flex;
@@ -18,13 +19,20 @@
 		height: 100%;
 	}
 
-	span {
-		display: block;
-		align-self: center;
-		flex: 1;
-		padding: 0 16px 0 12px;
-		width: 240px;
-		font-size: 14px;
-		font-weight: 500;
+	&-container {
+		&>:first-of-type {
+			color: #835afd;
+			font-size: 12px;
+		}
+
+		span {
+			display: block;
+			align-self: center;
+			flex: 1;
+			padding: 0 16px 0 12px;
+			width: 240px;
+			font-size: 14px;
+			font-weight: 500;
+		}
 	}
 }

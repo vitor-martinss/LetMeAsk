@@ -11,6 +11,7 @@ import { FormEvent, useState } from 'react'
 import { useAuth } from '../hooks/useAuth'
 import { database } from '../services/firebase'
 import { useRoom } from '../hooks/useRoom'
+import toast from 'react-hot-toast'
 
 type RoomParams = {
 	id: string;
@@ -28,6 +29,7 @@ export function Room() {
 		event.preventDefault()
 
 		if (newsQuestion.trim() === '') {
+			toast.error('Escreva uma pergunta')
 			return
 		}
 
@@ -45,7 +47,7 @@ export function Room() {
 			isHighlighted: false,
 			isAnswered: false
 		}
-
+		toast.success('Pergunta publicada com sucesso!')
 		await database.ref(`rooms/${roomId}/questions`).push(question)
 		setNewQuestion('')
 	}
@@ -62,7 +64,7 @@ export function Room() {
 	}
 
 	return ( 
-		<div id="page-room">
+		<div className="page-room">
 			<header>
 				<div className='content'>
 					<img src={logoImg} alt="Let me ask" />
@@ -70,10 +72,10 @@ export function Room() {
 				</div>
 			</header>
 
-			<main>
+			<main className="page-room-wrapper">
 				<div className='room-title'>
-					<h1>Sala {title}</h1>
-					{questions.length > 0 && <span>{questions.length} pergunta(s)</span>}
+					<h1>Sala <span className='room-title-main'>{title}</span> </h1>
+					{questions.length > 0 && <span className='room-title-number'>{questions.length} pergunta(s)</span>}
 					
 				</div>
 				<form onSubmit={handleSendQuestion}>

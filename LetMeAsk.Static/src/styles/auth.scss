@@ -4,16 +4,20 @@
 	height: 100vh;
 
 	aside {
-		flex: 7;
+		flex: 1;
 
 		background: #835afd;
 		color: #fff;
 
-		display: flex;
+		display: none;
 		flex-direction: column;
 		justify-content: center;
 
 		padding: 120px 80px;
+
+		@media (min-width: 768px) {
+			display: flex;
+		}
 
 		img {
 			max-width: 320px;
@@ -34,7 +38,7 @@
 	}
 
 	main {
-		flex: 8;
+		flex: 1;
 
 		padding: 0 32px;
 
