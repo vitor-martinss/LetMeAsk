@@ -7,11 +7,7 @@ import { AuthContextProvider } from './contexts/AuthContext'
 import { Room } from './pages/Room';
 import { AdminRoom } from './pages/AdminRoom';
 
-
 function App() {
-	
-
-
 	return (
     	<BrowserRouter>
 			<Toaster 
