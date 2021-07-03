@@ -17,6 +17,14 @@ jobs:
       - uses: actions/checkout@v2
       - run: cd LetMeAsk.Static && yarn && yarn build
       - uses: FirebaseExtended/action-hosting-deploy@v0
+      - env: 
+          REACT_APP_API_KEY: "AIzaSyC96UitvqhZWwSDA2o4fY_Qq2td88-JM0A"
+          REACT_APP_AUTH_DOMAIN: "letmeask-55879.firebaseapp.com"
+          REACT_APP_DATABASE_URL: "https://letmeask-55879-default-rtdb.firebaseio.com"
+          REACT_APP_PROJECT_ID: "letmeask-55879"
+          REACT_APP_STORAGE_BUCKET: "letmeask-55879.appspot.com"
+          REACT_APP_MESSAGING_SENDER_ID: "616627301491"
+          REACT_APP_APP_ID: "1:616627301491:web:ba6caa7dcc55f14bb24e06"
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_LETMEASK_55879 }}'
