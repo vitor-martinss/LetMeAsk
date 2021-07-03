@@ -1,6 +1,7 @@
 {
 	"name": "LetMeAsk",
-	"start_url": "/",
+	"start_url": ".",
+	"description": "A platform built to let you gather questions from your viewers during your stream and let them vote for which are the best questions for you to answer.",
 	"icons": [{
 			"src": "/android-chrome-192x192.png",
 			"sizes": "192x192",
