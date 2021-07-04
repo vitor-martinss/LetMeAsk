@@ -12,11 +12,11 @@ import { useAuth } from '../hooks/useAuth'
 import { database } from '../services/firebase'
 import { useRoom } from '../hooks/useRoom'
 import toast from 'react-hot-toast'
+import { Link } from 'react-router-dom'
 
 type RoomParams = {
 	id: string;
 }
-
 
 export function Room() {
 	const { user, signInWithGoogle } = useAuth()
@@ -30,7 +30,7 @@ export function Room() {
 			await signInWithGoogle()
 		}
 
-		toast.success('O seu login foi um sucesso! Agora você ja pode escrever uma pergunta.')
+		toast.success('O seu login foi um sucesso! Agora você ja pode escrever uma pergunta e dar o seu like.')
 	}
 
 	async function handleSendQuestion(event: FormEvent) {
@@ -42,6 +42,7 @@ export function Room() {
 		}
 
 		if(!user) {
+			toast.error('Escreva uma pergunta')
 			throw new Error('You must be logged in')
 		}
 
@@ -65,6 +66,11 @@ export function Room() {
 			await database.ref(`rooms/${roomId}/questions/${questionId}/likes/${likeId}`).remove()
 
 		} else {
+			if(!user) {
+				toast.error('Você deve estar logado para dar like')
+				return
+			}
+
 			await database.ref(`rooms/${roomId}/questions/${questionId}/likes`).push({
 				authorId: user?.id,
 			})
@@ -76,7 +82,10 @@ export function Room() {
 			<header>
 				<div className='content'>
 					<img src={logoImg} alt="Let me ask" />
-					<RoomCode code={roomId}/>
+					<div>
+						<RoomCode code={roomId}/>
+						<Link to='/'>Sair da Sala</Link>
+					</div>
 				</div>
 			</header>
 
@@ -100,7 +109,7 @@ export function Room() {
 									<span>{user.name}</span>
 								</div>
 							) : (
-								<span>Para enviar uma pergunta,&nbsp;
+								<span>Para enviar uma pergunta, ou dar like,&nbsp;
 									<button 
 										type='button'
 										onClick={handleLogin}

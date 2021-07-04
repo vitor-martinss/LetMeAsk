@@ -32,6 +32,31 @@
 					height: 40px;
 				}
 			}
+
+			a {
+				height: 40px;
+				border-radius: 8px;
+				font-weight: 500;
+				background-color: #fff;
+				border: 1px solid #835afd;
+				color: #835afd;
+				padding: 0 32px;	
+				text-decoration: none;
+
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				cursor: pointer;
+				
+
+				transition: filter 0.2s;
+
+				&:hover {
+					background-color: #835afd;
+					color: #fff;
+				}
+			}
 		}
 	}
 

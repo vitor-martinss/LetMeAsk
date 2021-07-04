@@ -17,7 +17,6 @@ type RoomParams = {
 	id: string;
 }
 
-
 export function AdminRoom() {
 	const history = useHistory()
 	const params = useParams<RoomParams>()
