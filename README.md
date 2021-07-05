@@ -21,6 +21,13 @@ Technologies that I used to develop this project
 - [Firebase Realtime Database](https://firebase.google.com/products/realtime-database)
 - [React Hot Toast](https://react-hot-toast.com/)
 
+### Improvements
+- CI CD with GitHub
+- Toasts
+- Responsive
+- Bugs on login and entry rooms
+- PWA
+
 ## 💻 Getting started
 
 
