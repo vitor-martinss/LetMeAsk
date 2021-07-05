@@ -45,7 +45,9 @@ export function Home() {
 			return
 		}
 
-		toast.success(`Bem vindo a sala ${roomCode} `)
+		const roomName = roomRef.val().title
+
+		toast.success(`Bem vindo a sala ${roomName} `)
 
 		history.push(`/rooms/${roomCode}`)
 	}

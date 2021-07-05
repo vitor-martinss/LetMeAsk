@@ -34,7 +34,7 @@ export function NewRoom() {
 			authorId: user?.id
 		})
 
-		toast.success(`Bem vindo a sua sala ${firebaseRoom.key} `)
+		toast.success(`Bem vindo a sua sala ${newRoom} `)
 
 		history.push(`/admin/rooms/${firebaseRoom.key}`)
 	}
